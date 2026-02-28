@@ -17,4 +17,5 @@ dist/
 
 .codebuddy
 .agents
+.claude
 skills-lock.json
