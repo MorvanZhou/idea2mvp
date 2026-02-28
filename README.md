@@ -2,6 +2,12 @@
 
 AI 驱动的产品全流程 Skill，帮助你从发现灵感到验证想法再到实现最小可行产品，完成从 Idea 到 MVP 的完整旅程。
 
+## 安装
+
+```bash
+npx skills add MorvanZhou/idea2mcp
+```
+
 ## 三阶段工作流
 
 ### 阶段一：灵感发现（Find Ideas）
