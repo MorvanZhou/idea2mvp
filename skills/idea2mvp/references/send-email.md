@@ -45,18 +45,9 @@ python3 scripts/send_email.py --subject "报告" --body "内容" --to someone@ex
 
 ## 触发时机
 
-邮件发送**不会主动询问用户**，而是在以下条件同时满足时自动执行：
+邮件发送仅在**用户主动要求**时执行。当用户要求将某些信息（报告、搜索结果、文档等）发送到邮箱时，按照上述使用方式执行。
 
-1. `.env.idea2mvp` 中 `EMAIL_SMTP_HOST`、`EMAIL_SENDER`、`EMAIL_PASSWORD`、`EMAIL_RECEIVER` 均已配置且非注释状态
-2. 当前阶段有可发送的内容产出（报告、文档等）
-
-如果未配置邮件参数，直接跳过，不询问用户。
-
-### 各阶段触发点
-
-- **阶段一**：工具探索报告生成后
-- **阶段二**：可行性评估报告生成后
-- **阶段三**：无自动触发（用户可主动要求发送）
+**前提**：`.env.idea2mvp` 中 `EMAIL_SMTP_HOST`、`EMAIL_SENDER`、`EMAIL_PASSWORD`、`EMAIL_RECEIVER` 均已配置且非注释状态。如果未配置，提示用户先配置邮箱参数。
 
 ## 常用邮箱 SMTP 配置
 

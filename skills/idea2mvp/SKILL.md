@@ -29,7 +29,7 @@ description: "Discover product ideas, validate them, and build MVPs. Search tren
 4. 生成 5 个可拓展的产品 Ideas
 5. 输出完整的工具探索报告
 
-**阶段输出**：工具探索报告（含工具推荐 + 产品 Ideas + 趋势洞察）。如用户已配置邮箱，自动将报告发送到邮箱（参考 `references/send-email.md`）。
+**阶段输出**：工具探索报告（含工具推荐 + 产品 Ideas + 趋势洞察）。
 
 **阶段过渡**：报告输出后，与用户深入讨论感兴趣的 Idea 方向。沟通完成后，询问用户是否生成一份**灵感确认文档**（Markdown 文件），内容包括：
 - 用户选定或倾向的 Idea 方向
@@ -61,7 +61,7 @@ description: "Discover product ideas, validate them, and build MVPs. Search tren
 - 发现根本性障碍时触发 **Idea 扩展机制**（参考 `references/idea-expansion.md`），不简单否定，而是提出替代方向
 - 用户可在任何阶段决定放弃或转向
 
-**阶段输出**：可行性评估报告（参考 `references/report-template.md`）。如用户已配置邮箱，自动将报告发送到邮箱（参考 `references/send-email.md`）。
+**阶段输出**：可行性评估报告（参考 `references/report-template.md`）。
 
 若建议推进，询问用户是否进入阶段三。
 
@@ -132,7 +132,7 @@ description: "Discover product ideas, validate them, and build MVPs. Search tren
 - **`references/build-mvp.md`** — MVP 实现指南：用户技术背景适配、范围确认、技术方案设计、编码实现流程、分层运行指引、部署方案。阶段三使用。
 - **`references/frontend-design.md`** — 前端设计规范：设计思考流程、字体/色彩/动效/构图/背景的视觉标准、实现原则。阶段三涉及前端界面时使用。
 - **`references/report-template.md`** — 可行性评估报告模板。阶段二最终输出使用。
-- **`references/send-email.md`** — 邮件通知使用指南：配置方式、脚本用法、各阶段触发时机。用户在 `.env.idea2mvp` 中配置邮箱后，阶段一和阶段二的报告会自动发送到邮箱；用户也可在任何时候主动要求发送。
+- **`references/send-email.md`** — 邮件通知使用指南：配置方式、脚本用法。当用户要求将某些信息通过邮件发送时，按此指南执行。
 
 ### scripts/
 
