@@ -6,15 +6,7 @@
 
 ## 前置条件
 
-在 `.env.idea2mvp` 中配置以下参数：
-
-```
-EMAIL_SMTP_HOST=smtp.qq.com
-EMAIL_SMTP_PORT=465
-EMAIL_SENDER=your_email@qq.com
-EMAIL_PASSWORD=your_auth_code
-EMAIL_RECEIVER=receiver@example.com
-```
+脚本运行时会自动检查 `.env.idea2mvp` 中的邮件配置项（`EMAIL_SMTP_HOST`、`EMAIL_SENDER`、`EMAIL_PASSWORD`、`EMAIL_RECEIVER`）。如果缺失或未配置，脚本会报错退出并提示缺少哪些参数。此时应引导用户在 `.env.idea2mvp` 中补充配置，可参考下方「常用邮箱 SMTP 配置」表格。
 
 ## 使用方式
 
@@ -31,6 +23,8 @@ python3 scripts/send_email.py --subject "工具探索报告" --file tmp/ph_resul
 python3 scripts/send_email.py --subject "全平台报告" --file tmp/ph_results.txt tmp/github_results.txt tmp/v2ex_results.txt
 ```
 
+> **Markdown 自动渲染**：当 `--file` 中包含 `.md` 文件时，脚本会自动将内容转换为 HTML 格式发送，邮件中会以渲染后的富文本形式展示（标题、列表、表格、代码块等）。非 `.md` 文件仍以纯文本发送。
+
 ### 从 stdin 读取内容
 
 ```bash
@@ -45,9 +39,7 @@ python3 scripts/send_email.py --subject "报告" --body "内容" --to someone@ex
 
 ## 触发时机
 
-邮件发送仅在**用户主动要求**时执行。当用户要求将某些信息（报告、搜索结果、文档等）发送到邮箱时，按照上述使用方式执行。
-
-**前提**：`.env.idea2mvp` 中 `EMAIL_SMTP_HOST`、`EMAIL_SENDER`、`EMAIL_PASSWORD`、`EMAIL_RECEIVER` 均已配置且非注释状态。如果未配置，提示用户先配置邮箱参数。
+邮件发送仅在**用户主动要求**时执行。当用户要求将某些信息（报告、搜索结果、文档等）发送到邮箱时，直接运行脚本即可。如果脚本报错提示缺少配置，引导用户补充 `.env.idea2mvp` 中的邮件参数。
 
 ## 常用邮箱 SMTP 配置
 
