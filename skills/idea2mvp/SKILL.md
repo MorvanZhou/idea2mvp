@@ -141,4 +141,5 @@ description: "Help users discover product ideas, validate them, and build MVPs. 
 - **`scripts/xiaohongshu_search.py`** — 使用 Playwright 自动化浏览器搜索小红书笔记。模拟真人操作（搜索 → 逐个点入详情页提取完整内容），需首次扫码登录。若用户设置了 `SKIP_XHS_PLAYWRIGHT=true` 则直接跳过小红书搜索（小红书未开放公网搜索，搜索引擎无法抓取）。
 - **`scripts/sspai_search.py`** — 通过少数派搜索 API 获取工具/产品相关文章。无需认证。支持单/多关键词搜索，自动去重、按点赞数排序。还支持 `--detail <id>` 获取文章完整正文内容。阶段一搜索中文社区时优先使用。
 - **`scripts/indiehackers_search.py`** — 通过 Indie Hackers 内置的 Algolia 搜索 API 获取独立开发者产品。无需认证。返回产品名称、月收入、领域标签、商业模式等。支持 `--min-revenue` 过滤低收入产品。阶段一搜索英文独立开发者社区时优先使用。
+- **`scripts/send_email.py`** — 通过 SMTP 发送邮件通知。可将搜索报告或任意文本内容发送到指定邮箱。支持从 `--body`、`--file`（多文件合并）或 stdin 传入内容。需在 `.env.idea2mvp` 中配置 `EMAIL_SMTP_HOST`、`EMAIL_SENDER`、`EMAIL_PASSWORD`、`EMAIL_RECEIVER`。仅使用 Python 标准库，无额外依赖。
 

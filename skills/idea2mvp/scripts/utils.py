@@ -26,6 +26,13 @@ ENV_TEMPLATE = """\
 
 # 跳过小红书 Playwright 浏览器搜索（设为 true 则直接跳过小红书搜索，小红书未开放公网搜索）
 # SKIP_XHS_PLAYWRIGHT=true
+
+# 邮件通知配置（用于 send_email.py 发送搜索报告等）
+# EMAIL_SMTP_HOST=smtp.qq.com
+# EMAIL_SMTP_PORT=465
+# EMAIL_SENDER=your_email@qq.com
+# EMAIL_PASSWORD=your_auth_code
+# EMAIL_RECEIVER=receiver@example.com
 """
 
 
